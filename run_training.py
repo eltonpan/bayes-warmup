@@ -53,8 +53,9 @@ def experiment(
     sugg_fingers = []
     sugg_smiles = []
 
-    for j in tqdm(range(50)):
+    for j in range(50):
         preds = []
+        print(f"Iteration {j} for split {key}")
         for i in range(10):
             regr = RandomForestRegressor(random_state=i)
             regr.fit(fingers, vals)
