@@ -55,7 +55,7 @@ def experiment(
 
     for j in range(50):
         preds = []
-        print(f"Iteration {j} for split {key}")
+        print(f"Iteration {j} for split {file_name}")
         for i in range(10):
             regr = RandomForestRegressor(random_state=i)
             regr.fit(fingers, vals)
