@@ -4,22 +4,37 @@ This is the official repository of the project 27:
 
 **How does initial warm-up data influence Bayesian optimization in low-data experimental settingss**  (AC BO Hackathon 2024)
 
-Elton Pan, Jurgis Ruza, Pengfei Cai
-
-MIT
+Elton Pan (MIT), Jurgis Ruza (MIT), Pengfei Cai (MIT)
 
 <p align="center">
-  <img src="/figures/stratified.png" width="350"/> 
   <img src="/figures/bo_trajectory.gif" width="400"/> 
 </p>
 
 ## 1) Overview
 
-Some text
+Real-world experiments in chemistry and materials science often involve very small initial datasets (10-100 data points). In this project, we propose to investigate how the 1) size and 2) distribution of the initial dataset influence the performance of bayesian optimization algorithms. We propose experiments on molecular property optimization tasks.
+
+## 2) Approach and main findings
+
+### Stratified sampling is more efficient than random
+We show that stratified sampling as a more efficient way to sample a warmup dataset. First, a k-means clustering algorithm determines the centroids (green), resulting in clusters shown below. Stratified sampling (i.e. sampling same number of datapoints per cluster) is then performed.
+
+<img src="/figures/stratified.png" width="350"/> 
+
+
+<p align="center">
+  <img src="/figures/bo_poster.png" width="700"/> 
+</p>
+
+### Pretrained embeddings allow more more efficient exploration in low-data regimes
+Here, we vary the number of datapoints from 5-200. We show that simple representations such as Morgan fingerprints (bottom left), more warmup samples improves BO performance. However, this is not true for pretrained embeddings such as MolFormer (bottom center), where more warmup datapoints do not necessarily improve BO performance. In fact, only 20-50 perform best for MolFormer, showing that pretrained embeddings may allow fewer warmup samples - a scenario common in real-world BO. Overall, pretrained embeddings are more efficient for optimization in chemical space (bottom right).
 
 
 
-## 2) Setup and installation
+
+
+
+## 3) Setup and installation
 
 The code in this repo has been tested on a Linux machine running Python 3.8.8
 
