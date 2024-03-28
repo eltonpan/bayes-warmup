@@ -74,13 +74,13 @@ The raw data required to reproduce results in the paper can be found in the `dat
 
 To run the BO experiments:
 
-Example 1) if you would like to run `random` sampling with `morgan` fingerprints, run:
+**Example 1:** if you would like to run `random` sampling with `morgan` fingerprints, run:
 
 ```
 python run_training.py --save_path ./saving/morgan/random --data_path ./data/morgan/splits/random/ --test_path ./data/qm9_ECFP6.csv
 ```
 
-Example 2) if you would like to run `stratified` sampling with `molformer` embedddings, run:
+**Example 2:** if you would like to run `stratified` sampling with `molformer` embedddings, run:
 
 ```
 python run_training.py --save_path ./saving/molformer/stratified --data_path ./data/molformer/splits/stratified/ --test_path ./data/qm9_molformer.csv
