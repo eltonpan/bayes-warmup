@@ -14,7 +14,7 @@ Elton Pan (MIT), Jurgis Ruza (MIT), Pengfei Cai (MIT)
 
 ## 1) Overview
 
-Real-world experiments in chemistry and materials science often involve very small initial datasets (10-100 data points). In this project, we propose to investigate how the 1) size and 2) distribution of the initial dataset influence the performance of bayesian optimization algorithms. We propose experiments on **HOMO-LUMO gap minimization** task on the **QM9 dataset**.
+Real-world experiments in chemistry and materials science often involve very small initial datasets (10-100 data points). In this project, we propose to investigate how the 1) size and 2) distribution of the initial dataset influence the performance of bayesian optimization algorithms. We propose experiments on **HOMO-LUMO gap minimization** task using the well-known **QM9 dataset**.
 
 ## 2) Main findings
 
