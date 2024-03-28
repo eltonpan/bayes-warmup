@@ -9,8 +9,8 @@ Elton Pan, Jurgis Ruza, Pengfei Cai
 MIT
 
 <p align="center">
-  <img src="/figures/stratified.png" width="300"/> 
-  <img src="/figures/bo_trajectory.gif" width="350"/> 
+  <img src="/figures/stratified.png" width="400"/> 
+  <img src="/figures/bo_trajectory.gif" width="450"/> 
 </p>
 
 <!-- <p align="center">
