@@ -69,7 +69,15 @@ make sure the `bayes-warmup` is the environment under dropdown menu `Kernel` > `
 
 ## 3) Code reproducibility
 
-The raw data required to reproduce results in the paper can be found in `data/` directory:
+The raw data required to reproduce results in the paper can be found in the `data/` folder. The BO trajectories are saved in the `saving/` folder. Results are visualized in `bo_trajectory_result_analysis.ipynb` (trajectories) and `visualize_pca.ipynb` (PCA plot).
+
+
+To run the BO experiments, run:
+
+```
+python run_training.py --save_path ./saving/morgan/random --data_path ./data/morgan/splits/random/ --test_path ./data/qm9_ECFP6.csv
+```
+
 ```
 ├── all_combi_trajs.pkl: pickle file of all saved trajectories (objective values vs. iteration)
 ├── bo_trajectory_result_analysis.ipynb: generate trajectory plots
