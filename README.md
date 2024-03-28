@@ -1,6 +1,6 @@
 # AC BO Hackathon 2024: Team `bayes-warmup`
 
-This is the official repository of the project 27:
+This is the official repository of:
 
 **How does initial warm-up data influence Bayesian optimization in low-data experimental settingss**  (AC BO Hackathon 2024)
 
@@ -30,10 +30,6 @@ We show that stratified sampling as a more efficient way to sample a warmup data
 
 ### B) Pretrained embeddings allow more more efficient exploration in low-data regimes
 Here, we vary the number of datapoints from 5-200. We show that simple representations such as Morgan fingerprints (bottom left), more warmup samples improves BO performance. However, this is not true for pretrained embeddings such as MolFormer (bottom center), where more warmup datapoints do not necessarily improve BO performance. In fact, only 20-50 perform best for MolFormer, showing that pretrained embeddings may allow fewer warmup samples - a scenario common in real-world BO. Overall, pretrained embeddings are more efficient for optimization in chemical space (bottom right).
-
-
-
-
 
 
 ## 3) Setup and installation
@@ -109,3 +105,6 @@ The raw data required to reproduce results in the paper can be found in `data/` 
 ├── visualize_pca.ipynb
 └── visualize.py
 ```
+
+## 3) Contact
+If you have any questions, please free free to contact us at [eltonpan@mit.edu](mailto:eltonpan@mit.edu), [pengfeic@mit.edu](mailto:pengfeic@mit.edu), [jruza@mit.edu](mailto:jruza@mit.edu)
