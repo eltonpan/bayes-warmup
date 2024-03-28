@@ -7,7 +7,6 @@ from sklearn.ensemble import RandomForestRegressor
 from multiprocessing import Pool
 from scipy.stats import norm
 
-
 def run(data_path, save_path, test_path):
     files_to_iterate = os.listdir(data_path)
     amounts = [5, 10, 20, 50, 100, 200]
@@ -36,13 +35,19 @@ def experiment(
     data_path,
     df_test,
     save_path,
-    key,
+    key
 ):
     ind = file_name.split("_")[-1]
 
     df = pd.read_csv(f"{data_path}/{file_name}")
 
-    feat_cols = [f"bit{i}" for i in range(2048)]
+    finger_type = data_path.split("/")[2]
+    print(f"Running {finger_type}")
+    if finger_type == "morgan":
+        feat_cols = [f"bit{i}" for i in range(2048)]
+    elif finger_type == "molformer":
+        feat_cols = [f"mf{i}" for i in range(768)]
+
     vals = df.gap.values
 
     fingers = df[feat_cols].values
@@ -115,4 +120,5 @@ if __name__ == "__main__":
         "--test_path",
     )
     args = parser.parse_args()
-    run(data_path=args.data_path, save_path=args.save_path, test_path=args.test_path)
+    run(data_path=args.data_path, save_path=args.save_path, test_path=args.test_path, )
+
