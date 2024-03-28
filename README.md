@@ -76,7 +76,7 @@ make sure the `bayes-warmup` is the environment under dropdown menu `Kernel` > `
 
 ## 3) Code reproducibility
 
-The data required to reproduce results in the paper can be found in `datasets/` directory:
+The data required to reproduce results in the paper can be found in `data/` directory:
 ```
 ├── all_results.pkl
 ├── BO trajectory results analysis.ipynb
