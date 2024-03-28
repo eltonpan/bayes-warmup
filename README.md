@@ -59,15 +59,10 @@ Run the following terminal commands
 
 3. Add conda environment to Jupyter notebook
 ```bash
-  conda install -c anaconda ipykernel
+  pip install matplotlib; pip install rdkit; pip install pandas; pip install sklearn; pip install seaborn
 ```
 ```bash
   python -m ipykernel install --user --name=bayes-warmup
-```
-
-4. Open jupyter notebooks
-```bash
-  jupyter notebook <notebook_name>.ipynb
 ```
 
 make sure the `bayes-warmup` is the environment under dropdown menu `Kernel` > `Change kernel`
