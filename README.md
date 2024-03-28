@@ -10,11 +10,12 @@ MIT
 
 <p align="center">
   <img src="/figures/stratified.png" width="600"/> 
-</p>
-
-<p align="center">
   <img src="/figures/bo_trajectory.gif" width="600"/> 
 </p>
+
+<!-- <p align="center">
+  <img src="/figures/bo_trajectory.gif" width="600"/> 
+</p> -->
 
 
 
