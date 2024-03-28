@@ -16,12 +16,13 @@ Real-world experiments in chemistry and materials science often involve very sma
 
 ## 2) Approach and main findings
 
-### A) Stratified sampling is more efficient than random
-We show that stratified sampling as a more efficient way to sample a warmup dataset. First, a k-means clustering algorithm determines the centroids (green), resulting in clusters shown below. Stratified sampling (i.e. sampling same number of datapoints per cluster) is then performed.
-
 <p align="center">
 <img src="/figures/stratified.png" width="350"/> 
 </p>
+
+### A) Stratified sampling is more efficient than random
+We show that stratified sampling as a more efficient way to sample a warmup dataset. First, a k-means clustering algorithm determines the centroids (green), resulting in clusters shown above. Stratified sampling (i.e. sampling same number of datapoints per cluster) is then performed.
+
 
 <p align="center">
   <img src="/figures/bo_poster.png" width="700"/> 
