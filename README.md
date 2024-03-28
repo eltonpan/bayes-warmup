@@ -6,7 +6,9 @@ This is the official repository of:
 
 Elton Pan (MIT), Jurgis Ruza (MIT), Pengfei Cai (MIT)
 
+<p align="center">
 [Poster](figures/bo_poster.png) | [Video]()
+</p>
 
 <p align="center">
   <img src="/figures/bo_trajectory.gif" width="400"/> 
