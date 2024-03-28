@@ -6,6 +6,7 @@ from tqdm import tqdm
 from sklearn.ensemble import RandomForestRegressor
 from multiprocessing import Pool
 from scipy.stats import norm
+from itertools import repeat
 
 def run(data_path, save_path, test_path):
     files_to_iterate = os.listdir(data_path)
@@ -21,11 +22,18 @@ def run(data_path, save_path, test_path):
 
     results = []
     for key, val in file_dict.items():
-        # for file_name in val:
-        with Pool(len(val)) as p:
+        file_paths = val
+        with Pool(processes=10) as p:
             results.append(
                 p.starmap(
-                    experiment, [(f, data_path, df_test, save_path, key) for f in val]
+                    experiment,
+                    zip(
+                        file_paths,
+                        repeat(data_path),
+                        repeat(df_test),
+                        repeat(save_path),
+                        repeat(key),
+                    ),
                 )
             )
 
