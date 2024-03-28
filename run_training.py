@@ -2,13 +2,20 @@ import os
 import argparse
 import pandas as pd
 import numpy as np
-from tqdm import tqdm
 from sklearn.ensemble import RandomForestRegressor
 from multiprocessing import Pool
 from scipy.stats import norm
 from itertools import repeat
 
+
 def run(data_path, save_path, test_path):
+    """
+    data_path - Path towards where the data files are saved, eq, data/morgan/splits/random
+    save_path - Path to where you want the data to be saved
+    test_path - Path to where the test dataset is located
+
+    Runs the training loop in parallel across the different datasets
+    """
     files_to_iterate = os.listdir(data_path)
     amounts = [5, 10, 20, 50, 100, 200]
     file_dict = {}
@@ -38,13 +45,17 @@ def run(data_path, save_path, test_path):
             )
 
 
-def experiment(
-    file_name,
-    data_path,
-    df_test,
-    save_path,
-    key
-):
+def experiment(file_name, data_path, df_test, save_path, key):
+    """
+    The optimization loop with the RandomForrest regressor
+    file_name - name of the file with the warmup data points
+    data_path - path to where the file is located
+    df_test - test dataset with a smiles column, gap column and the
+        fingerprint columns, 2048 for morgan fingerprints,
+        768 for molformer fingerprints
+    save_path - path to where the file should be saved
+    key - amount for the data split, eq 5 or 10 or 20 ...
+    """
     ind = file_name.split("_")[-1]
 
     df = pd.read_csv(f"{data_path}/{file_name}")
@@ -109,12 +120,18 @@ def experiment(
 
 
 def acquisition_function(kind, prediction, uncertainty):
+    """
+    General acquisition function class
+    """
     if kind == "EI":
         ind = expected_improvement(prediction, uncertainty, prediction.min())
     return prediction[ind], ind
 
 
 def expected_improvement(mean, sigma, ymin):
+    """
+    Expected improvement acquisition function for minimizing a property
+    """
     u = (mean - ymin) / sigma
     ei = sigma * (u * norm.cdf(u) + norm.pdf(u))
     ei[sigma <= 0] = 0
@@ -125,13 +142,17 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Running AL loop for warmstarts")
     parser.add_argument(
         "--data_path",
+        help="Path towards where the data files are saved, eq, data/morgan/splits/random",
     )
     parser.add_argument(
-        "--save_path",
+        "--save_path", help="Path to where you want the data to be saved"
     )
     parser.add_argument(
-        "--test_path",
+        "--test_path", helpp="Path to where the test dataset is located"
     )
     args = parser.parse_args()
-    run(data_path=args.data_path, save_path=args.save_path, test_path=args.test_path, )
-
+    run(
+        data_path=args.data_path,
+        save_path=args.save_path,
+        test_path=args.test_path,
+    )
