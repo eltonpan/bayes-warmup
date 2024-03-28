@@ -31,7 +31,7 @@ First, a k-means clustering algorithm determines the centroids (green), resultin
 </p>
 
 ### B) Pretrained embeddings allow more efficient exploration in low-data regimes
-Here, we vary the number of datapoints from 5-200. We show that simple representations such as Morgan fingerprints (left), more warmup samples improves BO performance. However, this is not true for pretrained embeddings such as MolFormer (center), where **more warmup datapoints do not necessarily improve BO performance**. In fact, only 20-50 perform best for MolFormer, showing that **pretrained embeddings may allow fewer warmup samples** - a common scenario in real-world BO. Overall, pretrained embeddings are more efficient for optimization in chemical space (right).
+Here, we vary the number of datapoints from 5-200. We show that simple representations such as Morgan fingerprints (left), more warmup samples improves BO performance. However, this is not true for pretrained embeddings such as MolFormer (center), where **more warmup datapoints do not necessarily improve BO performance**. In fact, only 20-50 perform best for MolFormer, showing that **pretrained embeddings may allow fewer warmup samples** - a common scenario in real-world, low-data BO. Overall, pretrained embeddings are more efficient for optimization in chemical space (right).
 
 
 ## 3) Setup and installation
