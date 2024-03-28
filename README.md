@@ -13,12 +13,6 @@ MIT
   <img src="/figures/bo_trajectory.gif" width="400"/> 
 </p>
 
-<!-- <p align="center">
-  <img src="/figures/bo_trajectory.gif" width="600"/> 
-</p> -->
-
-
-
 ## 1) Overview
 
 Some text
