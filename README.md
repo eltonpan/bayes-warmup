@@ -71,10 +71,10 @@ make sure the `bayes-warmup` is the environment under dropdown menu `Kernel` > `
 
 The raw data required to reproduce results in the paper can be found in the `data/` folder. The BO trajectories are saved in the `saving/` folder. Results are visualized in `bo_trajectory_result_analysis.ipynb` (trajectories) and `visualize_pca.ipynb` (PCA plot).
 
-1)To get the pre-computed molecular representations (Morgan fingerprint + MolFormer embeddings):
+1) To get the pre-computed molecular representations (Morgan fingerprint + MolFormer embeddings):
 
-a. Download [`qm9_ECFP6.csv`](https://www.dropbox.com/scl/fi/xnr7cnaonkomt92lb6nuk/qm9_ECFP6.csv?rlkey=l2ou3gl3tev73a720736hwmwq&dl=0) and place it in both `data/` and `data/morgan` folders
-b. Download [`qm9_molformer.csv`](https://www.dropbox.com/scl/fi/ta37h6444c7akzijw8fuj/qm9_molformer.csv?rlkey=9qy8emhs2tjatxaxf4ew59xti&dl=0) and place it in both `data/` and `data/molformer` folders
+- Download [`qm9_ECFP6.csv`](https://www.dropbox.com/scl/fi/xnr7cnaonkomt92lb6nuk/qm9_ECFP6.csv?rlkey=l2ou3gl3tev73a720736hwmwq&dl=0) and place it in both `data/` and `data/morgan` folders
+- Download [`qm9_molformer.csv`](https://www.dropbox.com/scl/fi/ta37h6444c7akzijw8fuj/qm9_molformer.csv?rlkey=9qy8emhs2tjatxaxf4ew59xti&dl=0) and place it in both `data/` and `data/molformer` folders
 
 2) To run the BO experiments:
 
