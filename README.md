@@ -72,10 +72,18 @@ make sure the `bayes-warmup` is the environment under dropdown menu `Kernel` > `
 The raw data required to reproduce results in the paper can be found in the `data/` folder. The BO trajectories are saved in the `saving/` folder. Results are visualized in `bo_trajectory_result_analysis.ipynb` (trajectories) and `visualize_pca.ipynb` (PCA plot).
 
 
-To run the BO experiments, run:
+To run the BO experiments:
+
+Example 1) if you would like to run `random` sampling with `morgan` fingerprints, run:
 
 ```
 python run_training.py --save_path ./saving/morgan/random --data_path ./data/morgan/splits/random/ --test_path ./data/qm9_ECFP6.csv
+```
+
+Example 2) if you would like to run `stratified` sampling with `molformer` embedddings, run:
+
+```
+python run_training.py --save_path ./saving/molformer/stratified --data_path ./data/molformer/splits/stratified/ --test_path ./data/qm9_molformer.csv
 ```
 
 ### Repo directory
