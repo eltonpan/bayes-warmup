@@ -25,7 +25,7 @@ We show that stratified sampling as a more efficient way to sample a warmup data
 
 
 <p align="center">
-  <img src="/figures/bo_poster.png" width="700"/> 
+  <img src="/figures/bo_results.png" width="700"/> 
 </p>
 
 ### B) Pretrained embeddings allow more more efficient exploration in low-data regimes
