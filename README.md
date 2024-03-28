@@ -51,7 +51,7 @@ Run the following terminal commands
   cd bayes-warmup
 ```
 ```bash
-  conda env create -f env/env.yml
+  conda create -n bayes-warmup
 ```
 ```bash
   conda activate bayes-warmup
