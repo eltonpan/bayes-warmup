@@ -90,6 +90,8 @@ python run_training.py --save_path ./saving/morgan/random --data_path ./data/mor
 python run_training.py --save_path ./saving/molformer/stratified --data_path ./data/molformer/splits/stratified/ --test_path ./data/qm9_molformer.csv
 ```
 
+The above 2 commands will store trajectories in the `saving/` folder.
+
 ### Repo directory
 ```
 ├── all_combi_trajs.pkl: pickle file of all saved trajectories (objective values vs. iteration)
