@@ -78,6 +78,7 @@ To run the BO experiments, run:
 python run_training.py --save_path ./saving/morgan/random --data_path ./data/morgan/splits/random/ --test_path ./data/qm9_ECFP6.csv
 ```
 
+### Repo directory
 ```
 ├── all_combi_trajs.pkl: pickle file of all saved trajectories (objective values vs. iteration)
 ├── bo_trajectory_result_analysis.ipynb: generate trajectory plots
