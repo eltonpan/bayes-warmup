@@ -14,14 +14,14 @@ Elton Pan (MIT), Jurgis Ruza (MIT), Pengfei Cai (MIT)
 
 Real-world experiments in chemistry and materials science often involve very small initial datasets (10-100 data points). In this project, we propose to investigate how the 1) size and 2) distribution of the initial dataset influence the performance of bayesian optimization algorithms. We propose experiments on molecular property optimization tasks.
 
-## 2) Approach and main findings
+## 2) Main findings
 
 <p align="center">
 <img src="/figures/stratified.png" width="350"/> 
 </p>
 
 ### A) Stratified sampling is more efficient than random
-We show that stratified sampling as a more efficient way to sample a warmup dataset. First, a k-means clustering algorithm determines the centroids (green), resulting in clusters shown above. Stratified sampling (i.e. sampling same number of datapoints per cluster) is then performed.
+First, a k-means clustering algorithm determines the centroids (green), resulting in clusters shown above. Stratified sampling (i.e. sampling same number of datapoints per cluster) is then performed. For example, we can see 2 samples sampled per cluster. We show that stratified sampling as a more efficient way to sample a warmup dataset. 
 
 
 <p align="center">
