@@ -6,7 +6,10 @@ qm9 = pd.read_csv('data/qm9.csv') # qm9 dataset
 qm9['gap'] = qm9['gap']*27.2114
 
 def smiles2gap(smiles):
-    return qm9[qm9['smiles']==smiles].gap.item()
+    if len(qm9[qm9['smiles']==smiles].gap) != 1:
+        return qm9[qm9['smiles']==smiles].gap.sample(1).item()
+    else:
+        return qm9[qm9['smiles']==smiles].gap.item()
 
 def load_results(feat_type, split, n_sample, seed):
     df = pd.read_csv(f'saving/{feat_type}/{split}/{n_sample}/s{seed}.csv')
@@ -34,3 +37,6 @@ def get_trajectory(feat_type, split, n_sample):
     print(f'{feat_type}, {split}, {n_sample} non-complete seeds:', incomplete_seeds)
     
     return np.array(best_gap_trajs)
+
+if __name__ == '__main__':
+    get_trajectory('morgan', 'random', '20')
