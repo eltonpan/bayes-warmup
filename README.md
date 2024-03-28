@@ -106,5 +106,5 @@ The raw data required to reproduce results in the paper can be found in `data/` 
 └── visualize.py
 ```
 
-## 3) Contact
+## 4) Contact
 If you have any questions, please free free to contact us at [eltonpan@mit.edu](mailto:eltonpan@mit.edu), [pengfeic@mit.edu](mailto:pengfeic@mit.edu), [jruza@mit.edu](mailto:jruza@mit.edu)
