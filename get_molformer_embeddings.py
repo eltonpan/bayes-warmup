@@ -11,6 +11,7 @@ tokenizer = AutoTokenizer.from_pretrained("ibm/MoLFormer-XL-both-10pct", trust_r
 
 df = pd.read_csv("data/qm9.csv")
 smiles_list = df["smiles"].tolist()
+gap_list = df["gap"].tolist()
 inputs = tokenizer(smiles_list, padding=True, return_tensors="pt").to(device)
 
 all_embeddings = []
@@ -28,5 +29,10 @@ for i in tqdm(range(0, max_range+1), desc="Processing batches"):
 
 all_embeddings = torch.cat(all_embeddings, dim=0)
 embeddings_df = pd.DataFrame(all_embeddings.cpu().numpy(), columns=[f'mf{i}' for i in range(0, 768)])
+
+embeddings_df = embeddings_df.drop(columns=['Unnamed: 0'])
 embeddings_df["smiles"] = smiles_list
-embeddings_df.to_csv("molformer_embeddings.csv")
+embeddings_df["gap"] = gap_list
+embeddings_df['gap'] = embeddings_df['gap']*27.2114
+
+embeddings_df.to_csv("data/molformer/qm9_molformer.csv")
