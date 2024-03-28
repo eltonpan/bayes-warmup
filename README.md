@@ -2,7 +2,7 @@
 
 This is the official repository of:
 
-**How does initial warm-up data influence Bayesian optimization in low-data experimental settingss**  (AC BO Hackathon 2024)
+**How does initial warm-up data influence Bayesian optimization in low-data experimental settings**  (AC BO Hackathon 2024)
 
 Elton Pan (MIT), Jurgis Ruza (MIT), Pengfei Cai (MIT)
 
