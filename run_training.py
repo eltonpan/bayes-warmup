@@ -23,7 +23,7 @@ def run(data_path, save_path, test_path):
     results = []
     for key, val in file_dict.items():
         file_paths = val
-        with Pool(processes=10) as p:
+        with Pool(processes=5) as p:
             results.append(
                 p.starmap(
                     experiment,
@@ -83,6 +83,8 @@ def experiment(
             prediction=prediction,
             uncertainty=uncertainty,
         )
+        # cleanup
+        del new_point, prediction, uncertainty
 
         fingers = np.concatenate((fingers, test_fing[index].reshape(1, -1)))
         vals = np.append(vals, test_vals[index])
@@ -100,6 +102,9 @@ def experiment(
         os.makedirs(f"{save_path}/{key}")
     df_save.to_csv(f"{save_path}/{key}/{ind}")
     print(f"{key}_{ind} is done")
+    # cleanup
+    del preds, regr
+
     return f"{key}_{ind} is done"
 
 
