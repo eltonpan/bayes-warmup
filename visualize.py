@@ -17,10 +17,11 @@ def load_results(feat_type, split, n_sample, seed):
 
     return df
 
-def get_trajectory(feat_type, split, n_sample):
+def get_trajectory(feat_type, split, n_sample, return_mols=False):
     dfs = [load_results(feat_type, split, n_sample, seed) for seed in range(10)]
 
     best_gap_trajs = [] # 10 trajectories of best gaps over iterations for all seeds
+    mol_trajs = []
     incomplete_seeds = 0
     for df in dfs:
         best_gap_traj = [] # 1 trajectory of best gaps over iterations
@@ -33,10 +34,16 @@ def get_trajectory(feat_type, split, n_sample):
             best_gap_trajs.append(best_gap_traj)
         else:
             incomplete_seeds += 1
+        mol_trajs.append(list(df['smiles']))
+
+    
     
     print(f'{feat_type}, {split}, {n_sample} non-complete seeds:', incomplete_seeds)
     
-    return np.array(best_gap_trajs)
+    if return_mols:
+        return np.array(best_gap_trajs), mol_trajs
+    else:
+        return np.array(best_gap_trajs)
 
 if __name__ == '__main__':
     get_trajectory('morgan', 'random', '20')
