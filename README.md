@@ -77,7 +77,7 @@ make sure the `bayes-warmup` is the environment under dropdown menu `Kernel` > `
 ## 3) Code reproducibility
 
 The data required to reproduce results in the paper can be found in `datasets/` directory:
-
+```
 ├── analysis.ipynb
 ├── data
 │   ├── molformer
@@ -104,3 +104,4 @@ The data required to reproduce results in the paper can be found in `datasets/` 
 │   └── kmeans.cpython-37.pyc
 ├── README.md
 └── run_training.py
+```
