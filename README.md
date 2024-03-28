@@ -78,30 +78,34 @@ make sure the `bayes-warmup` is the environment under dropdown menu `Kernel` > `
 
 The data required to reproduce results in the paper can be found in `datasets/` directory:
 ```
-├── analysis.ipynb
+├── all_results.pkl
+├── BO trajectory results analysis.ipynb
 ├── data
 │   ├── molformer
-│   │   └── splits
-│   │   │   ├── fragment
-│   │   │   ├── random
-│   │   │   └── stratified
 │   ├── morgan
-│   │   ├── qm9_ECFP6.csv
-│   │   └── splits
-│   │       ├── fragment
-│   │       ├── random
-│   │       └── stratified
 │   └── qm9.csv
 ├── featurizers
 │   ├── morgan.py
 │   └── __pycache__
-│       └── morgan.cpython-37.pyc
 ├── figures
+│   ├── bo_poster.png
+│   ├── bo_trajectory.gif
+│   └── stratified.png
 ├── get_ecfp.py
+├── get_molformer_embeddings.py
+├── get_molformer_splits.py
+├── get_morgan_splits.py
 ├── kmeans.py
-├── nohup.out
+├── plot_mols.py
 ├── __pycache__
-│   └── kmeans.cpython-37.pyc
+│   ├── kmeans.cpython-37.pyc
+│   └── visualize.cpython-37.pyc
 ├── README.md
-└── run_training.py
+├── results.ipynb
+├── run_training.py
+├── saving
+│   ├── molformer
+│   └── morgan
+├── visualize_pca.ipynb
+└── visualize.py
 ```
