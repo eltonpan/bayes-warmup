@@ -13,7 +13,7 @@ MIT
 </p>
 
 <p align="center">
-  <img src="/figures/bo_trajectory.png" width="600"/> 
+  <img src="/figures/bo_trajectory.gif" width="600"/> 
 </p>
 
 
