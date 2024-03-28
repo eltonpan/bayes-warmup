@@ -71,8 +71,8 @@ make sure the `bayes-warmup` is the environment under dropdown menu `Kernel` > `
 
 The raw data required to reproduce results in the paper can be found in `data/` directory:
 ```
-├── all_results.pkl
-├── BO trajectory results analysis.ipynb
+├── all_combi_trajs.pkl: pickle file of all saved trajectories (objective values vs. iteration)
+├── bo_trajectory_result_analysis.ipynb: generate trajectory plots
 ├── data
 │   ├── molformer
 │   ├── morgan
@@ -82,25 +82,21 @@ The raw data required to reproduce results in the paper can be found in `data/` 
 │   └── __pycache__
 ├── figures
 │   ├── bo_poster.png
+│   ├── bo_results.png
 │   ├── bo_trajectory.gif
 │   └── stratified.png
-├── get_ecfp.py
-├── get_molformer_embeddings.py
-├── get_molformer_splits.py
-├── get_morgan_splits.py
-├── kmeans.py
-├── plot_mols.py
-├── __pycache__
-│   ├── kmeans.cpython-37.pyc
-│   └── visualize.cpython-37.pyc
+├── get_ecfp.py: get morgan fingerprints of molecules
+├── get_molformer_embeddings.py: get molformer embeddings of molecules
+├── get_molformer_splits.py: get splits based on molformer embeddings
+├── get_morgan_splits.py: get splits based on morgan fingerprints
+├── kmeans.py: functions for k-means
 ├── README.md
-├── results.ipynb
-├── run_training.py
+├── run_training.py: run bayesian optimization of band gaps
 ├── saving
-│   ├── molformer
-│   └── morgan
-├── visualize_pca.ipynb
-└── visualize.py
+│   ├── molformer: raw trajectories (best objective so far and molecules) for molformer
+│   └── morgan: (best objective so far and molecules) for morgan
+├── visualize_pca.ipynb: visualize BO in PCA space, generate gif
+└── visualize.py: helper functions for visualizations
 ```
 
 ## 4) Contact
