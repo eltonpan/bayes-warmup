@@ -10,7 +10,7 @@ MIT
 
 <p align="center">
   <img src="/figures/stratified.png" width="300"/> 
-  <img src="/figures/bo_trajectory.gif" width="400"/> 
+  <img src="/figures/bo_trajectory.gif" width="350"/> 
 </p>
 
 <!-- <p align="center">
