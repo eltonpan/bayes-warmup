@@ -35,4 +35,4 @@ embeddings_df["smiles"] = smiles_list
 embeddings_df["gap"] = gap_list
 embeddings_df['gap'] = embeddings_df['gap']*27.2114
 
-embeddings_df.to_csv("data/molformer/qm9_molformer.csv")
+embeddings_df.to_csv("data/qm9_molformer.csv")
