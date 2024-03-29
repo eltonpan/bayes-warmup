@@ -15,10 +15,10 @@ feat_name = 'morgan'
 qm9 = pd.read_csv('data/qm9.csv') # qm9 dataset
 qm9['gap'] = qm9['gap']*27.2114
 if feat_name == 'morgan':
-    feat = pd.read_csv(f'data/{feat_name}/qm9_ECFP6.csv')
+    feat = pd.read_csv(f'data/qm9_ECFP6.csv')
     feat_cols = [f'bit{i}' for i in range(2048)]
 elif feat_name == 'molformer': 
-    feat = pd.read_csv(f'data/{feat_name}/qm9_molformer.csv')
+    feat = pd.read_csv(f'data/qm9_molformer.csv')
     feat_cols = [f'mf{i}' for i in range(768)]
 
 # col names
