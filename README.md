@@ -102,7 +102,6 @@ The above 2 commands will store trajectories in the `saving/` folder.
 │   └── qm9.csv
 ├── featurizers
 │   ├── morgan.py
-│   └── __pycache__
 ├── figures
 │   ├── bo_poster.png
 │   ├── bo_results.png
