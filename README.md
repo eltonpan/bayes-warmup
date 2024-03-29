@@ -84,7 +84,7 @@ Alternatively, run `python get_ecfp.py` and `python get_embeddings.py` (takes ve
 
 2) (Optional) Get the warm-up datasets
 
-Run `python get_morgan_splits.py` and `python get_molformer_splits.py`. This is optional since data/ folder already has the warm-up datasets pre-computed
+Run `python get_morgan_splits.py` and `python get_molformer_splits.py`. This is optional since `data/` folder already has the warm-up datasets pre-computed
 
 3) Run the BO experiments:
 
