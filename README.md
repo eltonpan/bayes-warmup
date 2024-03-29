@@ -12,6 +12,8 @@ Elton Pan (MIT), Jurgis Ruza (MIT), Pengfei Cai (MIT)
   <img src="/figures/bo_trajectory.gif" width="400"/> 
 </p>
 
+[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/4gPTMaarQt0/0.jpg)](https://www.youtube.com/watch?v=4gPTMaarQt0)
+
 ## 1) Overview
 
 Real-world experiments in chemistry and materials science often involve very small initial datasets (10-100 data points). In this project, we propose to investigate **how the 1) size and 2) distribution of the warm-up dataset** influence the performance of bayesian optimization. We propose experiments on **HOMO-LUMO gap minimization** task using the well-known **QM9 dataset**.
@@ -133,6 +135,7 @@ The above 2 commands will store trajectories in the `saving/` folder.
 ├── visualize_pca.ipynb: visualize BO in PCA space, generate gif
 └── visualize.py: helper functions for visualizations
 ```
+
 
 ## 4) Contact
 If you have any questions, please free free to contact us at [eltonpan@mit.edu](mailto:eltonpan@mit.edu), [pengfeic@mit.edu](mailto:pengfeic@mit.edu), [jruza@mit.edu](mailto:jruza@mit.edu)
