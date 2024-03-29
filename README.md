@@ -27,7 +27,7 @@ First, a k-means clustering algorithm determines the centroids (green), resultin
 
 
 <p align="center">
-  <img src="/figures/bo_results.png" width="700"/> 
+  <img src="/figures/bo_results.png" width="900"/> 
 </p>
 
 ### B) Pretrained embeddings allow more efficient exploration in low-data regimes
