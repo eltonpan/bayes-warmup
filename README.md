@@ -17,15 +17,6 @@ Elton Pan (MIT), Jurgis Ruza (MIT), Pengfei Cai (MIT)
 
 Real-world experiments in chemistry and materials science often involve very small initial datasets (10-100 data points). In this project, we propose to investigate **how the 1) size and 2) distribution of the warm-up dataset** influence the performance of bayesian optimization. We propose experiments on **HOMO-LUMO gap minimization** task using the well-known **QM9 dataset**.
 
-### Youtube video:
-[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/4gPTMaarQt0/0.jpg)](https://www.youtube.com/watch?v=4gPTMaarQt0)
-
-### Poster:
-<p align="center">
-<img src="/figures/bo_poster.png" width="700"/> 
-</p>
-
-
 ## 2) Main findings
 
 <p align="center">
@@ -43,6 +34,8 @@ First, a k-means clustering algorithm determines the centroids (green), resultin
 ### B) Pretrained embeddings allow more efficient exploration in low-data regimes
 Here, we vary the number of datapoints from 5-200. We show that simple representations such as Morgan fingerprints (left), more warmup samples improves BO performance. However, this is not true for pretrained embeddings such as MolFormer (center), where **more warmup datapoints do not necessarily improve BO performance**. In fact, only 20-50 perform best for MolFormer, showing that **pretrained embeddings may allow fewer warmup samples** - a common scenario in real-world, low-data BO. Overall, pretrained embeddings are more efficient for optimization in chemical space (right).
 
+### Check out our youtube video:
+[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/4gPTMaarQt0/0.jpg)](https://www.youtube.com/watch?v=4gPTMaarQt0)
 
 ## 3) Setup and installation
 
