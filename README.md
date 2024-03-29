@@ -101,9 +101,9 @@ The above 2 commands will store trajectories in the `saving/` folder.
 ├── all_combi_trajs.pkl: pickle file of all saved trajectories (objective values vs. iteration)
 ├── bo_trajectory_result_analysis.ipynb: generate trajectory plots
 ├── data
-│   ├── molformer
-│   ├── morgan
-│   └── qm9.csv
+│   ├── molformer: splits using molformer embeddings
+│   ├── morgan: splits using morgan fingerprints
+│   └── qm9.csv: QM9 dataset
 ├── featurizers
 │   ├── morgan.py: ECFP6 class
 ├── figures
