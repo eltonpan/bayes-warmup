@@ -63,7 +63,7 @@ Run the following terminal commands
 3. Add conda environment to Jupyter notebook
 
 ```bash
-  python -m ipykernel install --user --name=zeosyn
+  conda install -c anaconda ipykernel
 ```
 ```bash
   python -m ipykernel install --user --name=bayes-warmup
