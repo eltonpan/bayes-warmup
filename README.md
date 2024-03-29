@@ -57,7 +57,7 @@ Run the following terminal commands
   conda activate bayes-warmup
 ```
 ```bash
-  pip install matplotlib; pip install rdkit; pip install pandas; pip install sklearn; pip install seaborn
+  pip install -r requirements.txt
 ```
 
 3. Add conda environment to Jupyter notebook
