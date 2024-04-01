@@ -76,16 +76,16 @@ make sure the `bayes-warmup` is the environment under dropdown menu `Kernel` > `
 
 ## 3) Code reproducibility
 
-The raw data required to reproduce results in the paper can be found in the `data/` folder. The BO trajectories are saved in the `saving/` folder. Results are visualized in [`bo_trajectory_result_analysis.ipynb`](`bo_trajectory_result_analysis.ipynb`) (trajectories) and [`visualize_pca.ipynb`](`visualize_pca.ipynb`) (PCA plot).
+The raw data required to reproduce results in the paper can be found in the `data/` folder. The BO trajectories are saved in the `saving/` folder. Results are visualized in [`bo_trajectory_result_analysis.ipynb`](bo_trajectory_result_analysis.ipynb) (trajectories) and [`visualize_pca.ipynb`](visualize_pca.ipynb) (PCA plot).
 
 1) Get the molecular representations (Morgan fingerprint + MolFormer embeddings) using either:
 
 - Download [`qm9_ECFP6.csv`](https://www.dropbox.com/scl/fi/xnr7cnaonkomt92lb6nuk/qm9_ECFP6.csv?rlkey=l2ou3gl3tev73a720736hwmwq&dl=0) and [`qm9_molformer.csv`](https://www.dropbox.com/scl/fi/ta37h6444c7akzijw8fuj/qm9_molformer.csv?rlkey=9qy8emhs2tjatxaxf4ew59xti&dl=0) place these 2 files in the `data/` folder (highly encouraged)
-- **OR** run [`get_ecfp.py`](`get_ecfp.py`) and [`get_embeddings.py`](`get_embeddings.py`) (sub-optimal, takes very long, ~9 hours).
+- **OR** run [`get_ecfp.py`](get_ecfp.py) and [`get_embeddings.py`](get_embeddings.py) (sub-optimal, takes very long, ~9 hours).
 
 2) (Optional) Get the warm-up datasets
 
-- Run [`get_morgan_splits.py`](`get_morgan_splits.py`) and [`get_molformer_splits.py`](`get_molformer_splits.py`). This step is optional since `data/` folder already has the warm-up datasets pre-computed.
+- Run [`get_morgan_splits.py`](get_morgan_splits.py) and [`get_molformer_splits.py`](get_molformer_splits.py). This step is optional since `data/` folder already has the warm-up datasets pre-computed.
 
 3) Run the BO experiments using [`run_training.py`](run_training.py)
 
@@ -103,7 +103,7 @@ python run_training.py --save_path ./saving/molformer/stratified --data_path ./d
 
 The above 2 commands will store trajectories in the `saving/` folder.
 
-4) Visualize results using [`bo_trajectory_result_analysis.ipynb`](`bo_trajectory_result_analysis.ipynb`) (trajectories) and [`visualize_pca.ipynb`](`visualize_pca.ipynb`) (PCA plot).
+4) Visualize results using [`bo_trajectory_result_analysis.ipynb`](bo_trajectory_result_analysis.ipynb) (trajectories) and [`visualize_pca.ipynb`](visualize_pca.ipynb) (PCA plot).
 
 
 ### Repo directory
